@@ -185,7 +185,7 @@ function checkPlattformAndArch() {
     plattform = os.platform() == 'win32' ? 'windows' : os.platform();
 
     zipFileName = `packages-action-${plattform}-${arch}.zip`;
-    executableFileName = `packages-action-${plattform}-${arch}${plattform == 'windows' ? '.exec' : ''}`;
+    executableFileName = `packages-action-${plattform}-${arch}${plattform == 'windows' ? '.exe' : ''}`;
     hashFileName = `packages-action-${plattform}-${arch}-hash.txt`;
 
     console.info(`valid platform ${os.platform()} and arch ${os.arch()}`);
