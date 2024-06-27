@@ -1,4 +1,4 @@
-# Delete Packeges GitHub Action
+# Delete Packages GitHub Action
 
 GitHub action to determine and delete existing versions of GitHub packages.
 
