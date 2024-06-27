@@ -217,9 +217,13 @@ async function main() {
         await determineAndDownloadApp();
         await executeApp();
         console.info(`end ${appName}`);
+        
+        process.exit();
     } catch (error) {
         console.error(`failed to execute ${appName}:`);
         console.error(error.message);
+
+        process.exit(1);
     }
 }
 
