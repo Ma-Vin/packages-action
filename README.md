@@ -63,6 +63,11 @@ At least one deletion indicator of *version_name_to_delete, delete_snapshots, nu
 
 ## Example usage
 
+### First Example
+
+Delete major, minor and patch versions of the `maven` package `com.github.ma-vin.examplepackage` at `Ma-Vin` user 
+packages with github token from repository secrets ([Using secrets in GitHub Actions](https://docs.github.com/en/actions/security-guides/using-secrets-in-github-actions))
+
 ```yaml
 uses: ma-vin/packages-action@v1.0
 with:
@@ -74,4 +79,21 @@ with:
   number_major_to_keep: 3
   number_minor_to_keep: 2
   number_patch_to_keep: 1
+```
+
+
+### Second Excample
+
+Test run for all snapshot versions of the `maven` package `com.github.ma-vin.examplepackage` at `Ma-Vin` user 
+packages, but without deleting them:
+
+```yaml
+uses: ma-vin/packages-action@v1.0
+with:
+  github_token: '${{ secrets.PersonalAccessTokenAtSecret }}'
+  dry_run: true
+  github_user: 'Ma-Vin'
+  package_type: 'maven'
+  package_name: 'com.github.ma-vin.examplepackage'
+  delete_snapshots: true
 ```
