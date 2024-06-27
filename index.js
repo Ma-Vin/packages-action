@@ -130,7 +130,10 @@ async function unpackApp(zipFileName) {
         appExec.on('close', () => {
             console.info('unpack done');
             resolve();
-        })
+        });
+
+        appExec.on('error', () => { throw new Error('failed to exectute app') });
+        appExec.on('exit', code => { if (code != 0) { throw new Error('failed to exectute app') } else { resolve } })
     });
 }
 
@@ -206,6 +209,9 @@ async function executeApp() {
         });
 
         appExec.on('close', resolve)
+
+        appExec.on('error', () => { throw new Error('failed to exectute app') })
+        appExec.on('exit', code => { if (code != 0) { throw new Error('failed to exectute app') } else { resolve } })
     });
 }
 
