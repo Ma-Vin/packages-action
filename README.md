@@ -53,7 +53,7 @@ uses: ma-vin/packages-action@v1.0
 with:
   github_token: '${{ secrets.PersonalAccessTokenAtSecret }}'
   dry_run: false
-  user: 'Ma-Vin'
+  github_user: 'Ma-Vin'
   package_type: 'maven'
   package_name: 'com.github.ma-vin.examplepackage'
   number_major_to_keep: 3
