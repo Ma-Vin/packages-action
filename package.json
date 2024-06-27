@@ -1,0 +1,25 @@
+{
+  "name": "packages-action",
+  "version": "1.0.0",
+  "description": "GitHub action to determine and delete existing versions of GitHub packages",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ma-Vin/packages-action-app.git"
+  },
+  "keywords": [
+    "github",
+    "action",
+    "packages",
+    "deletion"
+  ],
+  "author": "Ma-Vin",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/Ma-Vin/packages-action-app/issues"
+  },
+  "homepage": "https://github.com/Ma-Vin/packages-action-app#readme"
+}
