@@ -198,11 +198,11 @@ async function executeApp() {
 
     return new Promise((resolve) => {
         appExec.stdout.on('data', (data) => {
-            console.info(`app: ${data}`);
+            console.info(`${data}`);
         });
 
         appExec.stderr.on('data', (data) => {
-            console.error(`app: ${data}`);
+            console.error(`${data}`);
         });
 
         appExec.on('close', resolve)
