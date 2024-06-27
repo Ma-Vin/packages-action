@@ -13,7 +13,7 @@ inputs:
     description: 'indicator whether to print deletion candidates only or to delete versions/package'
     required: false
     default: true
-  user:
+  github_user:
     description: 'GitHub user who is the owner of the packages'
     required: true
   package_type:
