@@ -12,6 +12,14 @@ GitHub action to determine and delete existing versions of GitHub packages.
 ![NodeJsV20](https://img.shields.io/badge/Node.js-v20-geen?logo=nodedotjs)
 ![GoV1.22](https://img.shields.io/badge/Go-v1.22-blue?logo=go)
 
+
+## Supported platforms and archs
+The binaries of the GoLang project are compiled and released for the following combinations:
+
+![LinuxX64](https://img.shields.io/badge/Linux-x64-yellow?logo=linux) ![LinuxArm64](https://img.shields.io/badge/Linux-arm64-yellow?logo=linux)
+![WindowsX64](https://img.shields.io/badge/Windows-x64-blue?logo=windows) ![WindowsArm64](https://img.shields.io/badge/Windows-arm64-blue?logo=windows)
+
+
 ## Inputs
 
 ### `github_rest_api_url`
