@@ -206,7 +206,7 @@ async function executeApp() {
         });
 
         appExec.on('close', resolve)
-    }).catch(err => console.error(err));
+    });
 }
 
 
