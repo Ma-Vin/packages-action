@@ -41,9 +41,7 @@ async function determineAndDownloadApp() {
     const assetUrl = await getAssetUrl(zipFileName);
 
     await downloadApp(assetUrl);
-    console.info('download done');
     await unpackApp(zipFileName);
-    console.info('unpack done');
     await verifyHash(hashFileName, executableFileName);
     console.info('hash verrify done');
 }
@@ -88,7 +86,6 @@ function downloadApp(assetUrl) {
     }
     fs.mkdirSync(workDirectory);
 
-
     return new Promise(resolve => {
         https.get(assetUrl, binaryHttpOptions, res => {
 
@@ -108,8 +105,10 @@ function downloadApp(assetUrl) {
             res.on('data', (chunk) => {
                 stream.write(chunk);
             }).on('end', () => {
-                stream.end();
-                resolve();
+                stream.end(() => {
+                    console.info('download done');
+                    resolve();
+                });
             });
         });
     });
@@ -128,7 +127,10 @@ async function unpackApp(zipFileName) {
             console.error(`unzip ${data}`);
         });
 
-        appExec.on('close', resolve)
+        appExec.on('close', () => {
+            console.info('unpack done');
+            resolve();
+        })
     });
 }
 
