@@ -7,7 +7,7 @@ const spawn = require('child_process').spawn;
 
 
 const appName = 'PackagesAction';
-const workDirectory = `./${appName.toLowerCase()}work`;
+const workDirectory = `${__dirname}/${appName.toLowerCase()}work`;
 
 const releaseUrl = 'https://api.github.com/repos/Ma-Vin/packages-action-app/releases/tags/v1.0';
 
@@ -213,11 +213,12 @@ async function executeApp() {
 async function main() {
     try {
         console.info(`start ${appName}`);
+        console.info(`working at directory ${__dirname}`);
         checkPlattformAndArch();
         await determineAndDownloadApp();
         await executeApp();
         console.info(`end ${appName}`);
-        
+
         process.exit();
     } catch (error) {
         console.error(`failed to execute ${appName}:`);
