@@ -6,6 +6,13 @@ inputs:
     description: 'protocol and host of the GitHub rest api'
     required: false
     default: 'https://api.github.com'
+  github_token:
+    description: 'the access token to use for bearer authentication against GitHub rest api'
+    required: true
+  dry_run:
+    description: 'indicator whether to print deletion candidates only or to delete versions/package'
+    required: false
+    default: true
   user:
     description: 'GitHub user who is the owner of the packages'
     required: true
@@ -31,13 +38,6 @@ inputs:
   number_patch_to_keep:
     description: 'positive number of patch versions to keep (within a minor version)'
     required: false
-  github_token:
-    description: 'the access token to use for bearer authentication against GitHub rest api'
-    required: true
-  try_run:
-    description: 'indicator whether to print deletion candidates only or to delete versions/package'
-    required: false
-    default: true
 runs:
   using: 'node20'
   main: 'index.js'
