@@ -2,7 +2,7 @@
 
 GitHub action to determine and delete existing versions of GitHub packages.
 
-:rocket: This action uses [Ma-Vin/packages-action-app](https://github.com/Ma-Vin/packages-action-app) to process the main logic. The ***golang*** binary will be downloaded from [release v1.0](https://github.com/Ma-Vin/packages-action-app/releases/tag/v1.0)
+:rocket: This action uses [Ma-Vin/packages-action-app](https://github.com/Ma-Vin/packages-action-app) to process the main logic. The ***golang*** binary will be downloaded from [release v1.1](https://github.com/Ma-Vin/packages-action-app/releases/tag/v1.1)
 
 
 ## Inputs
@@ -16,7 +16,7 @@ GitHub action to determine and delete existing versions of GitHub packages.
 ### `dry_run`
 **Default** `true` - Indicator whether to print deletion candidates only or to delete versions/package.
 
-### `user`
+### `github_user`
 **Required**  - GitHub user who is the owner of the packages.
 
 ### `package_type`
