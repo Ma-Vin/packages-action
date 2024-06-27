@@ -84,7 +84,7 @@ async function getAssetUrl(zipFileName) {
 function downloadApp(assetUrl) {
     console.info(`download zip from ${assetUrl}`);
     if (fs.existsSync(workDirectory)) {
-        fs.rm(workDirectory, { recursive: true, force: true });
+        fs.rmSync(workDirectory, { recursive: true, force: true });
     }
     fs.mkdirSync(workDirectory);
 
