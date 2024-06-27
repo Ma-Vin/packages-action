@@ -4,6 +4,7 @@ GitHub action to determine and delete existing versions of GitHub packages.
 
 :rocket: This action uses [Ma-Vin/packages-action-app](https://github.com/Ma-Vin/packages-action-app) to process the main logic. The ***golang*** binary will be downloaded from [release v1.0](https://github.com/Ma-Vin/packages-action-app/releases/tag/v1.0)
 
+
 ## Inputs
 
 ### `github_rest_api_url`
@@ -38,6 +39,12 @@ Positive number of minor versions to keep (within a major version).
 
 ### `number_patch_to_keep`
 Positive number of patch versions to keep (within a minor version).
+
+### Important:
+At least one deletion indicator of *version_name_to_delete, delete_snapshots, number_major_to_keep number_minor_to_keep* or *number_patch_to_keep* must be set.
+
+:warning: If there will remain an empty package, the whole package will be deleted instead of its versions :warning:
+
 
 ## Example usage
 
