@@ -1,0 +1,43 @@
+name: 'Packages Housekeeping Action'
+author: Ma-Vin
+description: 'GitHub action to determine and delete existing versions of GitHub packages.'
+inputs:
+  github_rest_api_url:
+    description: 'protocol and host of the GitHub rest api'
+    required: false
+    default: 'https://api.github.com'
+  user:
+    description: 'GitHub user who is the owner of the packages'
+    required: true
+  package_type:
+    description: 'the type of package. At the moment only maven is supported (In general there exists npm, maven, rubygems, docker, nuget, container)'
+    required: true
+  package_name: 
+    description: 'the name of the package whose versions should be deleted'
+    required: true
+  version_name_to_delete:
+    description: 'a concrete version to delete (Independent of NUMBER_MAJOR_TO_KEEP NUMBER_MINOR_TO_KEEP and NUMBER_PATCH_TO_KEEP)'
+    required: false
+  delete_snapshots:
+    description: 'indicator whether to delete all snapshots or none (Snapshots are excluded from NUMBER_MAJOR_TO_KEEP NUMBER_MINOR_TO_KEEP and NUMBER_PATCH_TO_KEEP)'
+    required: false
+    default: false
+  number_major_to_keep:
+    description: 'positive number of major versions to keep'
+    required: false
+  number_minor_to_keep:
+    description: 'positive number of minor versions to keep (within a major version)'
+    required: false
+  number_patch_to_keep:
+    description: 'positive number of patch versions to keep (within a minor version)'
+    required: false
+  github_token:
+    description: 'the access token to use for bearer authentication against GitHub rest api'
+    required: true
+  try_run:
+    description: 'indicator whether to print deletion candidates only or to delete versions/package'
+    required: false
+    default: true
+runs:
+  using: 'node20'
+  main: 'index.js'
