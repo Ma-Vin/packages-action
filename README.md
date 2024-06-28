@@ -2,6 +2,9 @@
 
 GitHub action to determine and delete existing versions of GitHub packages.
 
+The application can handle versions of the type *&lt;major&gt;.&lt;minor&gt;.&lt;patch&gt;* or
+*&lt;major&gt;.&lt;minor&gt;.&lt;patch&gt;-SNAPSHOT*. If *minor* or *patch* are missing they will be handled as zero.
+
 :rocket: This action uses [Ma-Vin/packages-action-app](https://github.com/Ma-Vin/packages-action-app) to process the main logic. The ***golang*** binary will be downloaded from [release v1.1](https://github.com/Ma-Vin/packages-action-app/releases/tag/v1.1)
 
 🐤 This repository and [Ma-Vin/packages-action-app](https://github.com/Ma-Vin/packages-action-app) are just a try out of GitHub Action, GoLang and GitHub rest api.
