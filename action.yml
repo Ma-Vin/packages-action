@@ -38,6 +38,14 @@ inputs:
   number_patch_to_keep:
     description: 'positive number of patch versions to keep (within a minor version)'
     required: false
+  debug_logs:
+    description: 'indicator whether to log addtional logs'
+    required: false
+    default: false
+  rest_timeout:
+    description: 'client timeout for rest calls'
+    required: false
+    default: 3
 runs:
   using: 'node20'
   main: 'index.js'

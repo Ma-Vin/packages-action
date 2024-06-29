@@ -9,12 +9,12 @@ const spawn = require('child_process').spawn;
 const appName = 'PackagesAction';
 const workDirectory = `${__dirname}/${appName.toLowerCase()}work`;
 
-const releaseUrl = 'https://api.github.com/repos/Ma-Vin/packages-action-app/releases/tags/v1.1';
+const releaseUrl = 'https://api.github.com/repos/Ma-Vin/packages-action-app/releases/tags/v1.1.1';
 
-const packagesActionLinuxAmd64Hash512 = 'e0cd294dc0939525032fdaac65026f67f3607c4dec1d9e2d293e1a2097d1d3a6d3c28fa6e61a033446600377c8b782406e1212ce66e63c90a5ebeada9fd0f65f';
-const packagesActionLinuxArm64Hash512 = '69a0f66fe1256cdd466e8b17747d43f15e97a52d91b9f33d7dc5026afb27c2d4d8aabe037fdc0e25d43156f7197be7e30cbf1c334e00b9a82833a7e3024c4255';
-const packagesActionWindowsAmd64Hash512 = '6ff12db7a15548531d38d61615c1612bed7987eae4c5342db5690c746826e639ce051330afc9612332ba47113164bf3b4a6b4219204b0e7666dc1c7a603cfad1';
-const packagesActionWindowsArm64Hash512 = '37b39a396887b19482128d84269804e6521daaefa7dd17b57254e33f0a0c06053a83e837cdab4c6ec225737993550e09a9493835026d04432ef28b6a41f74ef5';
+const packagesActionLinuxAmd64Hash512 = '59657c8f29c39646f1637afeb7c4d38737d135fab831b692f09e0f227117a25a79c2310a7eadad818dcd128fb7f4aa1902ea46c6706ff3cface63df46d7ff2bc';
+const packagesActionLinuxArm64Hash512 = '33985dbb8ad73c46085af080438a3edbb964d1c41bf6b8519f38cbddf71a53643d17ce5c9f903e1a7f118b84a0fe2f0a66867d7a9767fd93bf0a9f128990c569';
+const packagesActionWindowsAmd64Hash512 = '35939add1d4b8f7b79d74f45b53283181c3fc68ce0d71c7080c73269a70e2f4af98438942fa9981e858b671a8f9decda937141f8f72ec38a8b94803cc0842b3d';
+const packagesActionWindowsArm64Hash512 = '657afea53ffe9dac0421eda3a595b8ef0eaa7e5866aa89331d86fdde41abf2c52c358b2ee4b053e211f0512cc9842b51c22e3176a257ebaaa0768d77fe764368';
 
 const httpOptions = {
     headers: {
