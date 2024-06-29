@@ -5,11 +5,11 @@ GitHub action to determine and delete existing versions of GitHub packages.
 The application can handle versions of the type *&lt;major&gt;.&lt;minor&gt;.&lt;patch&gt;* or
 *&lt;major&gt;.&lt;minor&gt;.&lt;patch&gt;-SNAPSHOT*. If *minor* or *patch* are missing they will be handled as zero.
 
-:rocket: This action uses [Ma-Vin/packages-action-app](https://github.com/Ma-Vin/packages-action-app) to process the main logic. The ***golang*** binary will be downloaded from [release v1.1](https://github.com/Ma-Vin/packages-action-app/releases/tag/v1.1.1)
+:rocket: This action uses [Ma-Vin/packages-action-app](https://github.com/Ma-Vin/packages-action-app) to process the main logic. The ***golang*** binary will be downloaded from [release v1.1.1](https://github.com/Ma-Vin/packages-action-app/releases/tag/v1.1.1)
 
 :baby_chick: :construction_worker: This repository and [Ma-Vin/packages-action-app](https://github.com/Ma-Vin/packages-action-app) are just a try out of GitHub Action, GoLang and GitHub rest api. In normal case the process logic of this use case won't be split into two Node.js and GoLang applications.
 
-[![packages-action-app](https://img.shields.io/badge/Ma--Vin//packages--action--app-v1.1-geen?logo=github)](https://github.com/Ma-Vin/packages-action-app/releases/tag/v1.1.1)
+[![packages-action-app](https://img.shields.io/badge/Ma--Vin//packages--action--app-v1.1.1-geen?logo=github)](https://github.com/Ma-Vin/packages-action-app/releases/tag/v1.1.1)
 
 
 ![NodeJsV20](https://img.shields.io/badge/Node.js-v20-geen?logo=nodedotjs)
